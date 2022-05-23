@@ -1,3 +1,5 @@
 <?php
 
-echo "hola mundo";
+require 'greet.php';
+
+echo greet('Bob', 'Hello');
