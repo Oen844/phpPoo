@@ -13,9 +13,10 @@ class PostTest extends TestCase
 
         $post->addComment($comment);
 
-        $this->assetEquals(1, $post->getComments());
+        $this->assertEquals(1, $post->countComments());
         $this->assertInstanceOf(Comment::class, $post->getComments()[0]);
-
+        $post->deleteComents();
+        $this->assertEquals(0, $post->countComments());
 
     }
 }
